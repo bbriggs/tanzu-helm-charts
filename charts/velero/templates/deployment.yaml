@@ -148,7 +148,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ include "velero.fullname" $ }}
-                  key: {{ default "none" $key }}
+                  key: {{ default "none" $value }}
           {{- end }}
           {{- end }}
       dnsPolicy: {{ .Values.dnsPolicy }}
